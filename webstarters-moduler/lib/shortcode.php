@@ -10,6 +10,8 @@ add_shortcode('vis_modul', function ($atts) {
         'post__in'          => [$atts['modul']],
     ]);
 
+    $generate_shortcode = '';
+    
     foreach($posts as $post) {
         $generate_shortcode .= $post->post_content;
     }
