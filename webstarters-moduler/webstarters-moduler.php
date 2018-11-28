@@ -1,13 +1,13 @@
 <?php
 /**
  * @package           webstarters-moduler
- * @version           1.1.1
+ * @version           1.1.2
  * @link              https://webstarters.dk
  *
  * Plugin Name:       Webstarters Moduler
  * Plugin URI:        https://webstarters.dk
  * Description:       Et plugin til at opbygge moduler og indsætte dem via Visual Composer på sider
- * Version:           1.1.1
+ * Version:           1.1.2
  * Author:            Webstarters
  * Author URI:        https://webstarters.dk
  */
