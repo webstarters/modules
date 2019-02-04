@@ -1,0 +1,19 @@
+{
+    "name": "webstarters/moduler",
+    "description": "Et WordPress-plugin til at opbygge moduler i Visual Composer og indsæt via shortcode, widgets, m.m.",
+    "type": "wordpress-plugin",
+    "require": {
+        "composer/installers": "1.*"
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Jesper Kaae",
+            "email": "jk@webstarters.dk"
+        },
+        {
+            "name": "Peter Jørgensen",
+            "email": "pj@webstarters.dk"
+        }
+    ]
+}
