@@ -30,7 +30,9 @@ require_once(MODUL_DIR . '/lib/shortcode.php');
 
 // Instantiate classes
 new Modul();
-new ModulWPBakeryShortCode();
+if (class_exists('ModulWPBakeryShortCode')) {
+    new ModulWPBakeryShortCode();
+}
 
 // Register the systems.
 add_action('widgets_init', function () {
