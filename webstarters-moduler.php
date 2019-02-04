@@ -6,7 +6,7 @@
  *
  * Plugin Name:       Webstarters Moduler
  * Plugin URI:        https://webstarters.dk
- * Description:       Et plugin til at opbygge moduler og indsætte dem via Visual Composer på sider
+ * Description:       Et plugin til at opbygge moduler i Visual Composer og indsæt via shortcode, widgets, m.m.
  * Version:           1.2.1
  * Author:            Webstarters
  * Author URI:        https://webstarters.dk
