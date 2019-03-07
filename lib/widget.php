@@ -33,6 +33,8 @@ class modulWidget extends WP_Widget {
             'order'             => 'DESC',
             'post__in'          => [$instance['modul']],
         ]);
+		
+	$shortcode = '';
 
         foreach($posts as $post) {
             $shortcode .= $post->post_content;
