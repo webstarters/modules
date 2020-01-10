@@ -6,6 +6,9 @@ use WP_Widget;
 
 class Widget extends WP_Widget
 {
+    /**
+     * Set up the widget.
+     */
     public function __construct()
     {
         parent::__construct(
@@ -18,6 +21,14 @@ class Widget extends WP_Widget
         );
     }
 
+    /**
+     * Execute the widget.
+     *
+     * @param  array $atts
+     * @param  array $instance
+     *
+     * @return string
+     */
     public function widget($atts, $instance)
     {
         $posts = get_posts([
@@ -37,6 +48,13 @@ class Widget extends WP_Widget
         return do_shortcode($content);
     }
 
+    /**
+     * Display the widget in admin.
+     *
+     * @param  array $instance
+     *
+     * @return void
+     */
     public function form($instance)
     {
         $instance = wp_parse_args((array) $instance, ['title' => '']);
@@ -64,6 +82,14 @@ class Widget extends WP_Widget
         <?php
     }
 
+    /**
+     * Update the instance of the widget.
+     *
+     * @param  array $newInstance
+     * @param  array $oldInstance
+     *
+     * @return array
+     */
     public function update($newInstance, $oldInstance)
     {
         $instance = $oldInstance;

@@ -6,6 +6,14 @@ class Shortcode
 {
     const TAG = 'ws_module';
 
+    /**
+     * Execute the shortcode.
+     *
+     * @param  array  $atts
+     * @param  string $content
+     *
+     * @return string
+     */
     public function __invoke($atts = [], $content = '')
     {
         $posts = get_posts([

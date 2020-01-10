@@ -4,6 +4,13 @@ namespace Webstarters\Modules;
 
 class Toolbar
 {
+    /**
+     * Register the menu item.
+     *
+     * @param  object $adminBar
+     *
+     * @return void
+     */
     public function __invoke($adminBar)
     {
         $adminBar->add_node([

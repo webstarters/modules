@@ -6,12 +6,20 @@ use WPBakeryShortCode;
 
 class WPBakeryShortcode extends WPBakeryShortCode
 {
+    /**
+     * Register action and shortcode.
+     */
     public function __construct()
     {
         add_action('init', [$this, 'register']);
         add_shortcode('ws_vc_module', [$this, 'handle']);
     }
 
+    /**
+     * Register the Visual Composer element.
+     *
+     * @return void
+     */
     public function register()
     {
         if (! defined('WPB_VC_VERSION')) {
@@ -51,6 +59,13 @@ class WPBakeryShortcode extends WPBakeryShortCode
         ]);
     }
 
+    /**
+     * Execute the shortcode.
+     *
+     * @param  array    $atts
+     *
+     * @return string
+     */
     public function handle($atts)
     {
         extract(shortcode_atts([

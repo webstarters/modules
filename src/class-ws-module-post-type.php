@@ -6,6 +6,11 @@ class PostType
 {
     const POST_TYPE = 'webstarters_module';
 
+    /**
+     * Register the post type.
+     *
+     * @return void
+     */
     public function __invoke()
     {
         $labels = [
