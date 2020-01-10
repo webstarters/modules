@@ -2,9 +2,9 @@
 
 namespace Webstarters\Modules;
 
-use WPBakeryShortCode;
+use WPBakeryShortCode as WPBakeryShortCodeBase;
 
-class WPBakeryShortcode extends WPBakeryShortCode
+class WPBakeryShortcode extends WPBakeryShortCodeBase
 {
     /**
      * Register action and shortcode.
@@ -41,7 +41,7 @@ class WPBakeryShortcode extends WPBakeryShortCode
 
         vc_map([
             'name'              => __('Module', 'webstarters'),
-            'base'              => 'module',
+            'base'              => 'ws_vc_module',
             'description'       => __('Insert module', 'webstarters'),
             'category'          => __('Webstarters', 'webstarters'),
             'icon'              => WS_MODULE_DIR.'/assets/img/module_512x512.png',
@@ -50,10 +50,10 @@ class WPBakeryShortcode extends WPBakeryShortCode
                     'type'          => 'dropdown',
                     'heading'       => __('module', 'webstarters'),
                     'description'   => __('Choose module', 'webstarters'),
-                    'param_name'    => 'module',
+                    'param_name'    => 'module_id',
                     'holder'        => 'p',
                     'value'         => array_flip($modules),
-                    'std'           => 'Choose a module',
+                    'std'           => 'No module has been chosen',
                 ],
             ],
         ]);
@@ -69,11 +69,11 @@ class WPBakeryShortcode extends WPBakeryShortCode
     public function handle($atts)
     {
         extract(shortcode_atts([
-            'module' => 'X',
+            'module_id' => 'X',
         ], $atts));
 
-        $module = str_replace('id-', '', $module);
+        $id = str_replace('id-', '', $module_id);
 
-        return do_shortcode('['.Shortcode::TAG.' module="'. $module .'"]');
+        return do_shortcode('['.Shortcode::TAG.' id="'. $id .'"]');
     }
 }
