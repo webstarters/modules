@@ -1,6 +1,6 @@
 {
-    "name": "webstarters/moduler",
-    "description": "Et WordPress-plugin til at opbygge moduler i Visual Composer og indsæt via shortcode, widgets, m.m.",
+    "name": "webstarters/modules",
+    "description": "A WordPress-plugin to create Visual Composer components for use when page-building",
     "type": "wordpress-plugin",
     "require": {
         "composer/installers": "1.*"
