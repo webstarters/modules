@@ -8,7 +8,7 @@ A WordPress-plugin to create reusable components for use when page-building.
 
 By default, the page builder is only available on pages.
 
-Go to WPBakery Page Builder Settings > Role Manager and change Post types to Custom and check modul.
+Go to WPBakery Page Builder Settings > Role Manager and change `Post types` to `Custom` and make sure `webstarters_module` is checked.
 
 ## Credits
 
