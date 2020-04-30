@@ -36,7 +36,7 @@ class WPBakeryShortcode extends WPBakeryShortCodeBase
         $modules = [];
 
         foreach ($posts as $post) {
-            $modules['id-'. (string) $post->ID] = $post->post_title;
+            $modules[(string) $post->post_name] = $post->post_title;
         }
 
         vc_map([
@@ -50,7 +50,7 @@ class WPBakeryShortcode extends WPBakeryShortCodeBase
                     'type'          => 'dropdown',
                     'heading'       => __('module', 'webstarters'),
                     'description'   => __('Choose module', 'webstarters'),
-                    'param_name'    => 'module_id',
+                    'param_name'    => 'slug',
                     'holder'        => 'p',
                     'value'         => array_flip($modules),
                     'std'           => 'No module has been chosen',
@@ -66,14 +66,20 @@ class WPBakeryShortcode extends WPBakeryShortCodeBase
      *
      * @return string
      */
-    public function handle($atts)
+    public function handle($atts = [])
     {
-        extract(shortcode_atts([
-            'module_id' => 'X',
-        ], $atts));
+        $posts = get_posts([
+            'posts_per_page'    => -1,
+            'order'             => 'DESC',
+            'orderby'           => 'menu_order',
+            'name'              => $atts['slug'],
+            'post_type'         => PostType::POST_TYPE,
+        ]);
 
-        $id = str_replace('id-', '', $module_id);
+        foreach ($posts as $post) {
+            $content .= $post->post_content;
+        }
 
-        return do_shortcode('['.Shortcode::TAG.' id="'. $id .'"]');
+        return do_shortcode($content);
     }
 }
