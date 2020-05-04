@@ -76,6 +76,7 @@ class WPBakeryShortcode extends WPBakeryShortCodeBase
             'post_type'         => PostType::POST_TYPE,
         ]);
 
+        $content = '';
         foreach ($posts as $post) {
             $content .= $post->post_content;
         }
