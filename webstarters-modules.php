@@ -22,4 +22,4 @@ if (! defined('WS_MODULE_DIR')) {
 }
 
 // Load in our bootstrap.
-require_once(WS_MODULE_DIR.'/src/ws-module-bootstrap-functions.php');
+require_once WS_MODULE_DIR.'/src/ws-module-bootstrap-functions.php';
