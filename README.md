@@ -2,7 +2,7 @@
 
 A WordPress-plugin to create reusable components for use when page-building.
 
-## FAQ
+## Trouleshooting
 
 ### Why is Page Builder disabled on the custom post type?
 
