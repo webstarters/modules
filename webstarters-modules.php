@@ -1,13 +1,13 @@
 <?php
 /**
  * @package           webstarters-modules
- * @version           2.0.0
+ * @version           3.1.0
  * @link              https://webstarters.dk
  *
  * Plugin Name:       Webstarters Modules
  * Plugin URI:        https://webstarters.dk
  * Description:       A WordPress-plugin to create reusable components for use when page-building.
- * Version:           2.0.0
+ * Version:           3.1.0
  * Author:            Webstarters A/S
  * Author URI:        https://webstarters.dk
  */
