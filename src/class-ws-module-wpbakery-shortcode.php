@@ -66,7 +66,7 @@ class WPBakeryShortcode extends WPBakeryShortCodeBase
      *
      * @return string
      */
-    public function handle($atts = [])
+    public function handle($atts = [], $content = '')
     {
         $posts = get_posts([
             'posts_per_page'    => -1,
@@ -76,7 +76,6 @@ class WPBakeryShortcode extends WPBakeryShortCodeBase
             'post_type'         => PostType::POST_TYPE,
         ]);
 
-        $content = '';
         foreach ($posts as $post) {
             $content .= $post->post_content;
         }
