@@ -22,8 +22,9 @@ add_action('admin_bar_menu', new \Webstarters\Modules\Toolbar, 999);
 
 // Add Widget.
 require_once(WS_MODULE_DIR.'/src/class-ws-module-widget.php');
-$widget = new \Webstarters\Modules\Widget;
 
 add_action('widgets_init', function () {
-    register_widget('ws_module_widget');
+    $widget = new \Webstarters\Modules\Widget;
+
+    register_widget($widget);
 });
