@@ -3,7 +3,7 @@
     "description": "A WordPress-plugin to create Visual Composer components for use when page-building",
     "type": "wordpress-plugin",
     "require": {
-        "composer/installers": "1.*"
+        "composer/installers": "^1.9 || ^2.0"
     },
     "license": "proprietary",
     "authors": [
